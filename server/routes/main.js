@@ -1,5 +1,6 @@
 const express = require('express')
 const axios = require('axios')
+const config = require('config')
 const r = express.Router();
 
 
@@ -11,7 +12,7 @@ r.get('/', (req, res, next) => {
 r.get('/test', async (req, res, next) => {
   try {
     const resp = await axios.post(
-      'https://hooks.slack.com/services/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',
+      `https://hooks.slack.com/services/${config.get('slack.token')}`,
       {
         text: 'YO YO!!'
       })
