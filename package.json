@@ -1,32 +1,36 @@
 {
-  "name": "easy-peasy-bot",
+  "name": "rotom-bot",
   "version": "1.0.0",
-  "description": "The awesomest bot evar.",
+  "description": "Slack integration to provide live updates on Gitlab Merge Requests.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DEGoodmanWilson/easy-peasy-bot-app.git"
+    "url": "git+https://github.com/chrislu1207/rotom-bot.git"
   },
   "keywords": [
     "slack",
     "bot"
   ],
-  "author": "D.E. Goodman-Wilson",
+  "authors": [
+    "Chris Lu",
+    "Timoteo Shockness"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DEGoodmanWilson/easy-peasy-bot-app/issues"
+    "url": "https://github.com/chrislu1207/rotom-bot/issues"
   },
-  "homepage": "https://github.com/DEGoodmanWilson/easy-peasy-bot-app#readme",
+  "homepage": "https://github.com/chrislu1207/rotom-bot#readme",
   "engines": {
     "node": "5.1.1"
   },
   "dependencies": {
     "botkit": "0.2.2",
     "botkit-storage-mongo": "^1.0.2",
-    "mongodb": "^1.4.39"
+    "mongodb": "^1.4.39",
+    "nodemon": "^2.0.2"
   }
 }
