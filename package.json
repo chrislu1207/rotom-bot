@@ -4,7 +4,8 @@
   "description": "Slack integration to provide live updates on Gitlab Merge Requests.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
+    "dev": "TOKEN=xoxb-877999941687-865881491073-o8hUXy7e0Fty6RKNRUSWCNrg  nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
