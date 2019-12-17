@@ -6,7 +6,7 @@ const r = express.Router();
 
 r.get('/', (req, res, next) => {
   console.log(req)
-  res.send('WHY')
+  return res.send('WHY')
 })
 
 r.get('/test', async (req, res, next) => {
@@ -17,9 +17,9 @@ r.get('/test', async (req, res, next) => {
         text: 'YO YO!!'
       })
     console.log(resp)
-    res.send('okay')
+    return res.send('okay')
   } catch (error) {
-    res.send('Something went really bad!')
+    return res.send('Something went really bad!')
   }
 })
 

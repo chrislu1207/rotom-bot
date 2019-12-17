@@ -2,7 +2,6 @@
  * Module dependencies.
  */
 var app = require('../app');
-var debug = require('debug')('rotom:server');
 var http = require('http');
 /**
  * Get port from environment and store in Express.
@@ -66,5 +65,5 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('Listening on ' + bind);
+  console.log('Listening on ' + bind);
 }
