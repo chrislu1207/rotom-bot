@@ -18,10 +18,6 @@
     "slack",
     "bot"
   ],
-  "authors": [
-    "Chris Lu",
-    "Timoteo Shockness"
-  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/chrislu1207/rotom-bot/issues"
