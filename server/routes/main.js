@@ -6,7 +6,12 @@ const r = express.Router();
 
 r.get('/', (req, res, next) => {
   console.log(req)
-  return res.send('WHY')
+  return res.send('Welcome to Rotom, More than a Bot, a BOT!')
+})
+
+r.post('/', (req, res, next) => {
+  console.log(req.body)
+  return res.send('Got a POST')
 })
 
 // r.get('/test', async (req, res, next) => {
