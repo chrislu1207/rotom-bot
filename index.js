@@ -7,6 +7,9 @@
  * With custom integrations, we don't have a way to find out who installed us, so we can't message them :(
  */
 
+ // APP EXPRESS
+const { server } = require('./lib/server')
+
 function onInstallation(bot, installer) {
   if (installer) {
     bot.startPrivateConversation({ user: installer }, function(err, convo) {
@@ -104,6 +107,10 @@ controller.hears('hello', 'direct_message', function(bot, message) {
 controller.hears('TIM', 'direct_message', function(bot, message) {
   bot.reply(message, 'BIX!!!!!');
 });
+
+server.listen('8081', () => {
+  console.log('Server Listining on 8081')
+})
 
 /**
  * AN example of what could be:
