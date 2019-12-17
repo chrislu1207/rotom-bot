@@ -14,18 +14,18 @@ r.post('/', (req, res, next) => {
   return res.send('Got a POST')
 })
 
-// r.get('/test', async (req, res, next) => {
-//   try {
-//     const resp = await axios.post(
-//       `https://hooks.slack.com/services/${config.get('slack.token')}`,
-//       {
-//         text: 'YO YO!!'
-//       })
-//     console.log(resp)
-//     return res.send('okay')
-//   } catch (error) {
-//     return res.send('Something went really bad!')
-//   }
-// })
+r.get('/test',(req, res, next) => {
+ axios.post(
+      `https://hooks.slack.com/services/${config.get('slack.token')}`,
+      {
+        text: 'YO YO!!'
+      }).then(r => {
+        console.log(r)
+        return res.send('Testing...')
+      }).catch(e => {
+        console.log(e)
+        return res.send('Something went really bad!')
+      })
+})
 
 module.exports = r;
