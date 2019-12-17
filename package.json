@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "TOKEN=xoxb-877999941687-865881491073-o8hUXy7e0Fty6RKNRUSWCNrg  nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "TOKEN=xoxb-877999941687-865881491073-o8hUXy7e0Fty6RKNRUSWCNrg  nodemon index.js",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"LocalTunnel,Node\" -c \"cyan.bold,green.bold\" \"npm run lt\" \"npm run watch\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lt": "lt --port 8765 --subdomain rotom-bot"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,9 @@
     "body-parser": "^1.19.0",
     "botkit": "0.2.2",
     "botkit-storage-mongo": "^1.0.2",
+    "concurrently": "^5.0.1",
     "express": "^4.17.1",
+    "localtunnel": "^2.0.0",
     "mongodb": "^1.4.39",
     "nodemon": "^2.0.2"
   }
