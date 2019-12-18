@@ -6,7 +6,8 @@ const r = express.Router()
 
 r.post('/', (req, res, next) => {
   const payload = req.body.event;
-  console.log(req.body)
+  const token = process.env.BOT_TOKEN || require('config').get('bot.token')
+  console.log('Bearer ' + token)
   console.log(payload)
 
   axios.post('https://slack.com/api/chat.postMessage', {
@@ -14,7 +15,7 @@ r.post('/', (req, res, next) => {
     text: 'asdawdsa'
   }, {headers: {
     'Content-Type': 'application/json',
-      'Authorization': `Bearer ${process.env.BOT_TOKEN || require('config').get('bot.token')}`
+      'Authorization': 'Bearer ' + token
   }}).then(r => {
     return res.sendStatus(200)
   }).catch(e => {
