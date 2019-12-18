@@ -1,3 +1,4 @@
+'stric mode'
 const express = require('express')
 const axios = require('axios')
 
@@ -10,7 +11,7 @@ r.post('/', (req, res, next) => {
     text = 'Hey handsome. Hope you doing well!! :*'
   }
   console.log(payload)
-  
+
   axios.post('https://slack.com/api/chat.postMessage', {
     token: process.env.BOT_TOKEN || require(config).get('bot.token'),
     channel: payload.channel,
