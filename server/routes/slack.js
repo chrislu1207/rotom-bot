@@ -10,13 +10,19 @@ r.post('/', (req, res, next) => {
   console.log('Bearer ' + token)
   console.log(payload)
 
-  axios.post('https://slack.com/api/chat.postMessage', {
-    channel: payload.channel,
-    text: 'asdawdsa'
-  }, {headers: {
-    'Content-Type': 'application/json',
+  axios( 
+  {
+    method: 'post',
+    url: 'https://slack.com/api/chat.postMessage',
+    headers: {
+      'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token
-  }}).then(r => {
+    },
+    data: {
+      channel: payload.channel,
+      text: 'Bro! leave me alone!'
+    }
+  }).then(r => {
     return res.sendStatus(200)
   }).catch(e => {
     return next(`${e}, got an ERROR`)
