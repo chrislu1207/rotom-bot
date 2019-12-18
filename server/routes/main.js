@@ -1,6 +1,5 @@
 const express = require('express')
 const axios = require('axios')
-const config = require('config')
 const checkToken = require('../../middlewares').checkToken
 
 const r = express.Router();
@@ -17,7 +16,7 @@ r.post('/', checkToken, (req, res, next) => {
 
 r.get('test',(req, res, next) => {
  axios.post(
-      `https://hooks.slack.com/services/${config.get('slack.token') || process.env.TOKEN}`,
+      `https://hooks.slack.com/services/${process.env.TOKEN || require('config').get('slack.token')}`,
       {
         text: 'YO YO!!'
       }).then(r => {
