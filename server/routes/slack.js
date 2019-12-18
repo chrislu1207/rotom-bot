@@ -6,3 +6,5 @@ r.post('/', (req, res, next) => {
   const challenge = req.body.challenge || 'no challenge';
   res.send({challenge})
 })
+
+module.exports = r;
