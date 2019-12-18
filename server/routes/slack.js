@@ -19,12 +19,14 @@ r.post('/', (req, res, next) => {
       'Authorization': 'Bearer ' + token
     },
     data: {
-      channel: payload.channel,
+      channel: payload.user,
       text: 'Bro! leave me alone!'
     }
   }).then(r => {
+    console.log('At the response', r)
     return res.sendStatus(200)
   }).catch(e => {
+    console.log('At the catch block')
     return next(`${e}, got an ERROR`)
   })
 })
