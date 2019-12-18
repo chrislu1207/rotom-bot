@@ -15,7 +15,10 @@ r.post('/', (req, res, next) => {
   const instance = axios.create({
     baseURL: 'https://slack.com/api/',
     timeout: 2000,
-    header: {'Authorization': `Bearer ${process.env.BOT_TOKEN || require(config).get('bot.token')}`}
+    header: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': `Bearer ${process.env.BOT_TOKEN || require(config).get('bot.token')}`
+    }
   })
 
   instance.post('chat.postMessage', {
