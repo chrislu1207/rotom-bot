@@ -1,6 +1,8 @@
 const express = require('express')
 const axios = require('axios')
 const config = require('config')
+const { checkToken } = require('../../middlewares')
+
 const r = express.Router();
 
 
@@ -9,7 +11,7 @@ r.get('/', (req, res, next) => {
   return res.send('Welcome to Rotom, More than a Bot, a BOT!')
 })
 
-r.post('/', (req, res, next) => {
+r.post('/', checkToken, (req, res, next) => {
   console.log(req.body)
   return res.send('Got a POST')
 })
