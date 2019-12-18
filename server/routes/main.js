@@ -1,7 +1,7 @@
 const express = require('express')
 const axios = require('axios')
 const config = require('config')
-const { checkToken } = require('../../middlewares')
+const checkToken = require('../../middlewares').checkToken
 
 const r = express.Router();
 
