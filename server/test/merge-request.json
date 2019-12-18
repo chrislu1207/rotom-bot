@@ -1,0 +1,173 @@
+{
+  "object_kind": "merge_request",
+  "event_type": "merge_request",
+  "user": {
+    "name": "Chris Lu",
+    "username": "chrislu1207",
+    "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+  },
+  "project": {
+    "id": 9578875,
+    "name": "grow-frontend",
+    "description": "",
+    "web_url": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+    "avatar_url": null,
+    "git_ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "git_http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git",
+    "namespace": "software",
+    "visibility_level": 0,
+    "path_with_namespace": "poweredbygrow/software/grow-frontend",
+    "default_branch": "master",
+    "ci_config_path": "",
+    "homepage": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+    "url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git"
+  },
+  "object_attributes": {
+    "assignee_id": null,
+    "author_id": 1479768,
+    "created_at": "2019-12-17 23:35:02 UTC",
+    "description": "# MR Checklist\n- [ ] Self review\n- [ ] Code style checks passing\n- [ ] Unit tests passing\n- [ ] Changelog entry\n- [ ] e2e tests added / updated\n- [ ] Demo / screenshots added (if applicable)\n- [ ] UI / UX design check from design / product team",
+    "head_pipeline_id": 103875229,
+    "id": 45431226,
+    "iid": 540,
+    "last_edited_at": null,
+    "last_edited_by_id": null,
+    "merge_commit_sha": null,
+    "merge_error": null,
+    "merge_params": {
+      "force_remove_source_branch": "1"
+    },
+    "merge_status": "unchecked",
+    "merge_user_id": null,
+    "merge_when_pipeline_succeeds": false,
+    "milestone_id": null,
+    "source_branch": "rotom-test",
+    "source_project_id": 9578875,
+    "state_id": 1,
+    "target_branch": "master",
+    "target_project_id": 9578875,
+    "time_estimate": 0,
+    "title": "WIP: [Test] Hackathon test",
+    "updated_at": "2019-12-17 23:35:02 UTC",
+    "updated_by_id": null,
+    "url": "https://gitlab.com/poweredbygrow/software/grow-frontend/merge_requests/540",
+    "source": {
+      "id": 9578875,
+      "name": "grow-frontend",
+      "description": "",
+      "web_url": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+      "git_http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git",
+      "namespace": "software",
+      "visibility_level": 0,
+      "path_with_namespace": "poweredbygrow/software/grow-frontend",
+      "default_branch": "master",
+      "ci_config_path": "",
+      "homepage": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+      "url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+      "ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+      "http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git"
+    },
+    "target": {
+      "id": 9578875,
+      "name": "grow-frontend",
+      "description": "",
+      "web_url": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+      "git_http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git",
+      "namespace": "software",
+      "visibility_level": 0,
+      "path_with_namespace": "poweredbygrow/software/grow-frontend",
+      "default_branch": "master",
+      "ci_config_path": "",
+      "homepage": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+      "url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+      "ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+      "http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git"
+    },
+    "last_commit": {
+      "id": "f4dce00d84cd089e226b447e6d62f8302572c355",
+      "message": "[Test] Hackathon test\n",
+      "timestamp": "2019-12-17T15:34:36-08:00",
+      "url": "https://gitlab.com/poweredbygrow/software/grow-frontend/commit/f4dce00d84cd089e226b447e6d62f8302572c355",
+      "author": {
+        "name": "chrislu1207",
+        "email": "clu@atb.com"
+      }
+    },
+    "work_in_progress": true,
+    "total_time_spent": 0,
+    "human_total_time_spent": null,
+    "human_time_estimate": null,
+    "assignee_ids": [],
+    "state": "opened",
+    "action": "open"
+  },
+  "labels": [],
+  "changes": {
+    "author_id": {
+      "previous": null,
+      "current": 1479768
+    },
+    "created_at": {
+      "previous": null,
+      "current": "2019-12-17 23:35:02 UTC"
+    },
+    "description": {
+      "previous": null,
+      "current": "# MR Checklist\n- [ ] Self review\n- [ ] Code style checks passing\n- [ ] Unit tests passing\n- [ ] Changelog entry\n- [ ] e2e tests added / updated\n- [ ] Demo / screenshots added (if applicable)\n- [ ] UI / UX design check from design / product team"
+    },
+    "id": {
+      "previous": null,
+      "current": 45431226
+    },
+    "iid": {
+      "previous": null,
+      "current": 540
+    },
+    "merge_params": {
+      "previous": {},
+      "current": {
+        "force_remove_source_branch": "1"
+      }
+    },
+    "source_branch": {
+      "previous": null,
+      "current": "rotom-test"
+    },
+    "source_project_id": {
+      "previous": null,
+      "current": 9578875
+    },
+    "target_branch": {
+      "previous": null,
+      "current": "master"
+    },
+    "target_project_id": {
+      "previous": null,
+      "current": 9578875
+    },
+    "title": {
+      "previous": null,
+      "current": "WIP: [Test] Hackathon test"
+    },
+    "updated_at": {
+      "previous": null,
+      "current": "2019-12-17 23:35:02 UTC"
+    },
+    "total_time_spent": {
+      "previous": null,
+      "current": 0
+    }
+  },
+  "repository": {
+    "name": "grow-frontend",
+    "url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "description": "",
+    "homepage": "https://gitlab.com/poweredbygrow/software/grow-frontend"
+  }
+}

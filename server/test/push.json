@@ -1,0 +1,99 @@
+{
+  "object_kind": "push",
+  "event_name": "push",
+  "before": "f6dd7089348eabd44710aa00afec88d342f478f0",
+  "after": "a2370dafd5fae3ee00a52e25512fd71303ac5390",
+  "ref": "refs/heads/master",
+  "checkout_sha": "a2370dafd5fae3ee00a52e25512fd71303ac5390",
+  "message": null,
+  "user_id": 3494209,
+  "user_name": "Timoteo Shockness",
+  "user_username": "timoteo.shockness",
+  "user_email": "",
+  "user_avatar": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/3494209/avatar.png",
+  "project_id": 9578875,
+  "project": {
+    "id": 9578875,
+    "name": "grow-frontend",
+    "description": "",
+    "web_url": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+    "avatar_url": null,
+    "git_ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "git_http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git",
+    "namespace": "software",
+    "visibility_level": 0,
+    "path_with_namespace": "poweredbygrow/software/grow-frontend",
+    "default_branch": "master",
+    "ci_config_path": "",
+    "homepage": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+    "url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git"
+  },
+  "commits": [
+    {
+      "id": "a2370dafd5fae3ee00a52e25512fd71303ac5390",
+      "message": "Fixed `EmailVerificationField` so that it allows user to proceed past the email verification step with other applications when it has been passed one time for another application\n",
+      "timestamp": "2019-12-16T12:38:17-08:00",
+      "url": "https://gitlab.com/poweredbygrow/software/grow-frontend/commit/a2370dafd5fae3ee00a52e25512fd71303ac5390",
+      "author": {
+        "name": "Emily DeLisle",
+        "email": "edelisle@atb.com"
+      },
+      "added": [],
+      "modified": [
+        "origination/CHANGELOG.md",
+        "origination/src/forms/fields/EmailVerificationField.tsx"
+      ],
+      "removed": []
+    },
+    {
+      "id": "b901189ea3fdf23e83ab52844eb9b9888414501d",
+      "message": "[ORC-1218] add tests for list field components\n",
+      "timestamp": "2019-12-16T18:58:51+00:00",
+      "url": "https://gitlab.com/poweredbygrow/software/grow-frontend/commit/b901189ea3fdf23e83ab52844eb9b9888414501d",
+      "author": {
+        "name": "Edgar Zapeka",
+        "email": "ezapeka@atb.com"
+      },
+      "added": [
+        "forms/src/fields/list-field/components/ListItemFields.spec.tsx",
+        "forms/src/fields/list-field/components/LockedListFields.spec.tsx",
+        "forms/src/fields/list-field/components/UnlockedList.spec.tsx"
+      ],
+      "modified": [
+        "forms/CHANGELOG.md",
+        "forms/src/fields/list-field/components/LockedList.tsx"
+      ],
+      "removed": []
+    },
+    {
+      "id": "f6dd7089348eabd44710aa00afec88d342f478f0",
+      "message": "Added handling of string errors & updated handling of errors with no matching code in `errorHandler`\n",
+      "timestamp": "2019-12-13T15:27:10-08:00",
+      "url": "https://gitlab.com/poweredbygrow/software/grow-frontend/commit/f6dd7089348eabd44710aa00afec88d342f478f0",
+      "author": {
+        "name": "Emily DeLisle",
+        "email": "edelisle@atb.com"
+      },
+      "added": [],
+      "modified": [
+        "origination/CHANGELOG.md",
+        "origination/src/injectables/utils/errorHandler.ts",
+        "origination/src/translations/errors.ts"
+      ],
+      "removed": []
+    }
+  ],
+  "total_commits_count": 3,
+  "push_options": {},
+  "repository": {
+    "name": "grow-frontend",
+    "url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "description": "",
+    "homepage": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+    "git_http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git",
+    "git_ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "visibility_level": 0
+  }
+}
