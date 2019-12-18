@@ -17,7 +17,7 @@ r.post('/', checkToken, (req, res, next) => {
 
 r.get('/test',(req, res, next) => {
  axios.post(
-      `https://hooks.slack.com/services/${process.env.TOKEN || require('config').get('slack.token')}`,
+      'https://hooks.slack.com/services/' + process.env.TOKEN || require('config').get('slack.token'),
       {
         text: 'YO YO!!'
       }).then(r => {

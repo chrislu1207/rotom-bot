@@ -27,7 +27,7 @@ r.post('/', (req, res, next) => {
     return res.sendStatus(200)
   }).catch(e => {
     console.log('At the catch block')
-    return next(`${e}, got an ERROR`)
+    return next(e + ' - got an ERROR')
   })
 })
 
