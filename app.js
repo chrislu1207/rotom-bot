@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
-app.use('/', main);
+app.use('/gitlab', main);
 app.use('/slack', slack);
 
 // catch 404 and forward to error handler
