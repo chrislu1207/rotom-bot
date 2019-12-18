@@ -6,6 +6,7 @@ const r = express.Router()
 
 r.post('/', (req, res, next) => {
   const payload = req.body.event;
+  console.log(req.body)
   console.log(payload)
 
   axios.post('https://slack.com/api/chat.postMessage', {
