@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const logger = require('morgan');
 const main = require('./server/routes/main')
+const slack = require('./server/routes/slack')
 const app = express();
 
 app.use(logger('dev'));
@@ -10,6 +11,8 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use('/', main);
+app.use('/slack', slack)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
