@@ -13,8 +13,6 @@ const r = express.Router()
 
 r.post('/', (req, res, next) => {
   const payload = req.body.event;
-  const token = process.env.BOT_TOKEN || require('config').get('bot.token')
-  console.log('Bearer ' + token)
   console.log(payload)
   // Payload Important info
   // type - action type 'app_mention', 'message'

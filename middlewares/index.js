@@ -18,15 +18,20 @@ module.exports.GroupMessageConstructor = (formattedMessage) => ({
   data: formattedMessage
 })
 
-module.exports.DirectMessageConstructor = (formattedMessage) => ({
-  method: 'post',
-  url: 'https://slack.com/api/chat.postMessage',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + token
-  },
-  data: {
-      ...formattedMessage,
-    channel: payload ? payload.user : 'URDAKB6NN',
+module.exports.DirectMessageConstructor = (formattedMessage) => {
+  const token = process.env.BOT_TOKEN || require('config').get('bot.token')
+  console.log('Bearer ' + token)
+  return {
+    method: 'post',
+    url: 'https://slack.com/api/chat.postMessage',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + token
+    },
+    data: {
+        ...formattedMessage,
+      channel: 'URDAKB6NN' // Add Payload for get user or channel later
+    }
   }
-})
+  
+}
