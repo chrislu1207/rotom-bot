@@ -16,7 +16,6 @@ r.post('/push', (req, res, next) => {
 
   axios(axiosConstructor(formatMessage(object_kind, pushEvent)))
     .then(r => {
-      console.log(r);
       return res.sendStatus(200)
     })
     .catch(e => {
@@ -30,7 +29,6 @@ r.post('/merge-request', (req, res, next) => {
 
   axios(axiosConstructor(formatMessage(object_kind, mergeRequestEvent)))
     .then(r => {
-      console.log(r);
       return res.sendStatus(200);
     })
     .catch(e => {
@@ -44,7 +42,6 @@ r.post('/note', (req, res, next) => {
 
   axios(axiosConstructor(formatMessage(object_kind, noteEvent)))
     .then(r => {
-      console.log(r);
       return res.sendStatus(200);
     })
     .catch(e => {
