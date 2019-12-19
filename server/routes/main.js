@@ -12,7 +12,7 @@ r.post('/', checkToken, (req, res, next) => {
   console.log(type, '- TYPE')
   console.log(req.body, '- BODY REQ')
   if (type === 'Note Hook') {
-    return axios(DirectMessageConstructor(formatMessage(type, req.body), req.body.username))
+    return axios(DirectMessageConstructor(formatMessage(type, req.body), req.body.user.username))
       .then(r => {
         return res.sendStatus(200)
       })
