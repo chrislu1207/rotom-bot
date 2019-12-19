@@ -3,6 +3,7 @@ const express = require('express')
 const axios = require('axios')
 
 const { axiosConstructor } = require('../../middlewares')
+const formatMessage = require('../utils/formatMessage');
 const pushEvent = require('../test/push');
 const mergeRequestEvent = require('../test/merge-request');
 const noteEvent = require('../test/note');
