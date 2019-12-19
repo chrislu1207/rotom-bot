@@ -12,7 +12,7 @@ r.post('/', checkToken, (req, res, next) => {
   console.log(type, '- TYPE')
   console.log(req.body, '- BODY REQ')
   if (type === 'Note Hook') {
-    axios(DirectMessageConstructor(formatMessage(type, req.body)))
+    return axios(DirectMessageConstructor(formatMessage(type, req.body)))
       .then(r => {
         return res.sendStatus(200)
       })
@@ -22,7 +22,7 @@ r.post('/', checkToken, (req, res, next) => {
       });
   }
   if (type === 'Merge Request Hook' && req.body.object_attributes.work_in_progress) return res.sendStatus(200)
-  axios(GroupMessageConstructor(formatMessage(type, req.body)))
+  return axios(GroupMessageConstructor(formatMessage(type, req.body)))
     .then(r => {
       return res.sendStatus(200)
     })

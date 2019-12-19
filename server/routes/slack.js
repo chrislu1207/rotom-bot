@@ -13,6 +13,7 @@ const r = express.Router()
 
 r.post('/', (req, res, next) => {
   const payload = req.body.event;
+  console.log(req.body, "DO I HAVE AN EMAIL?")
   console.log(payload)
   // Payload Important info
   // type - action type 'app_mention', 'message'
