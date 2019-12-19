@@ -16,15 +16,16 @@ const axiosConstructor = (formattedMessage) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    url: 'https://hooks.slack.com/services/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',
+    url: `https://hooks.slack.com/services/${process.env.TOKEN || require('config').get('slack.token')}`,
     data: formattedMessage
   }
 }
 
-r.post('/', (req, res, next) => {
+r.post('/', checkToken, (req, res, next) => {
   // TODO 
   // check body reuqs
   // pass down bix
+  console.log(process.env.TOKEN || require('config').get('slack.token'), 'TOKENNN@@@@ @ @ @ @ @ @ ')
   console.log(req.get('X-Gitlab-Event'), 'HEADERRRRRR @@@@@@')
   
   axios(axiosConstructor(formatMessage(req.get('X-Gitlab-Event'), req.body)))
