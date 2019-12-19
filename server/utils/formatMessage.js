@@ -1,4 +1,6 @@
-const formatMessage = (type, body) => {
+// TODO
+// Add JS docs
+module.exports.formatMessage = (type, body) => {
   switch (type) {
     case 'Push Hook': {
       const {
@@ -133,5 +135,3 @@ const formatMessage = (type, body) => {
       return {};
   }
 };
-
-module.exports = formatMessage;

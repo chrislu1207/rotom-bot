@@ -1,29 +1,27 @@
 'use strict'
 const express = require('express')
 const axios = require('axios')
+const { DirectMessageConstructor } = require('../../middlewares')
+const { formatMessage } = require('../utils/formatMessage')
 
 const r = express.Router()
+
+// TODO
+// Map names/email to a file
+// Add bot commands like
+// Help, subscribe, My MRs, MR ###, Sup
 
 r.post('/', (req, res, next) => {
   const payload = req.body.event;
   const token = process.env.BOT_TOKEN || require('config').get('bot.token')
   console.log('Bearer ' + token)
   console.log(payload)
+  // Payload Important info
+  // type - action type 'app_mention', 'message'
+  // text - content of the text
+  // 
 
-  axios( 
-  {
-    method: 'post',
-    url: 'https://slack.com/api/chat.postMessage',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + token
-    },
-    data: {
-      channel: payload.user,
-      text: 'Bro! leave me alone!'
-    }
-  }).then(r => {
-    console.log('At the response', r)
+  axios(DirectMessageConstructor(formatMessage(type, body))).then(r => {
     return res.sendStatus(200)
   }).catch(e => {
     console.log('At the catch block' + e)
