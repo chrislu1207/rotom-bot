@@ -31,7 +31,7 @@ r.post('/', (req, res, next) => {
 })
 
 r.post('/test-push', (req, res, next) => {
-  const { object_kind = '' } = pushEvent;
+  const  object_kind = pushEvent.object_kind || '';
 
   axios(axiosConstructor(formatMessage(object_kind, pushEvent)))
     .then(r => {
@@ -59,7 +59,7 @@ r.post('/test-merge-request', (req, res, next) => {
 });
 
 r.post('/test-note', (req, res, next) => {
-  const { object_kind = '' } = noteEvent;
+  const object_kind = noteEvent.object_kind || '';
 
   axios(axiosConstructor(formatMessage(object_kind, noteEvent)))
     .then(r => {
