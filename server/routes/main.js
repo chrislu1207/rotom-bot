@@ -25,8 +25,7 @@ r.post('/', (req, res, next) => {
   // TODO 
   // check body reuqs
   // pass down bix
-  console.log(req.body)
-  console.log(req.get('X-Gitlab-Event'))
+  console.log(req.get('X-Gitlab-Event'), 'HEADERRRRRR @@@@@@')
   
   axios(axiosConstructor(formatMessage(req.get('X-Gitlab-Event'), req.body)))
     .then(r => {
@@ -37,7 +36,6 @@ r.post('/', (req, res, next) => {
       console.log(e);
       return res.send('Something went really bad!');
     });
-  return res.sendStatus(200)
 })
 
 r.post('/test-push', (req, res, next) => {
