@@ -3,6 +3,7 @@ const express = require('express');
 const logger = require('morgan');
 const main = require('./server/routes/main');
 const slack = require('./server/routes/slack');
+const test = require('./server/routes/test')
 const app = express();
 
 app.use(logger('dev'));
@@ -13,8 +14,14 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res, next) => {
   return res.send('Welcome to Rotom, More than a Bot, a BOT!');
 });
+
+app.post('/', (req, res, next) => {
+  return res.send('Welcome to Rotom, More than a Bot, a BOT!');
+});
+
 app.use('/gitlab', main);
 app.use('/slack', slack);
+app.use('/test', test);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

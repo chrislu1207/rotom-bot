@@ -8,3 +8,14 @@ module.exports.checkToken = (req, res, next) => {
   }
   return next('Easy there champs!! Nice try! :p')
 }
+
+module.exports.axiosConstructor = (formattedMessage) => {
+  return {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    url: `https://hooks.slack.com/services/${process.env.TOKEN || require('config').get('slack.token')}`,
+    data: formattedMessage
+  }
+}
