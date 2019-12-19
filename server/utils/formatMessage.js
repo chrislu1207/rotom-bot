@@ -134,24 +134,27 @@ module.exports.formatMessage = (type, body) => {
           avatar_url = '',
         },
         project: { name: project_name = '' },
+        object_attributes: { ref = '' },
         builds = [],
       } = body;
       return {
         attachments: [
           {
-            fallback: `${user_name} triggered pipelines in ${project_name}`,
+            fallback: `A pipeline triggered by ${user_name} on branch *${ref}* in ${project_name} has failed!`,
             color: '#36a64f',
-            pretext: `${user_name} triggered pipelines in ${project_name}`,
+            pretext: `:warning: A pipeline triggered by ${user_name} on branch *${ref}* in ${project_name} has failed! :warning:`,
             author_name: user_name,
             author_link: `https://gitlab.com/${user_username}`,
             author_icon: avatar_url,
-            fields: builds.map(({ name, status }) => {
-              return {
-                title: name,
-                value: status,
-                short: false,
-              };
-            }),
+            fields: builds
+              .filter(({ status }) => status === 'failed')
+              .map(({ name, status }) => {
+                return {
+                  title: name,
+                  value: status,
+                  short: false,
+                };
+              }),
             footer: 'Gitlab Webhook',
             footer_icon: avatar_url,
             ts: Date.now(),
