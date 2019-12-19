@@ -50,14 +50,19 @@ module.exports.formatMessage = (type, body) => {
         assignees = [],
       } = body;
       const isMRApproval = action === 'approval';
+      const isMRUnapproval = action === 'unapproval';
       return {
         attachments: [
           {
-            fallback: isMRApproval
+            fallback: isMRUnapproval
+              ? `${user_name} unapproved a merge request in ${project_name}`
+              : isMRApproval
               ? `${user_name} approved a merge request in ${project_name}`
               : `${user_name} submitted a merge request to ${project_name}`,
             color: '#36a64f',
-            pretext: isMRApproval
+            pretext: isMRUnapproval
+              ? `:x: *${user_name} unapproved a merge request in ${project_name}*`
+              : isMRApproval
               ? `:white_check_mark: *${user_name} approved a merge request in ${project_name}*`
               : `:computer: *${user_name} submitted a merge request to ${project_name}*`,
             author_name: user_name,
