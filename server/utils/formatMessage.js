@@ -143,9 +143,6 @@ module.exports.formatMessage = (type, body) => {
             fallback: `A pipeline triggered by *${user_name}* on branch *${ref}* in ${project_name} has failed!`,
             color: '#36a64f',
             pretext: `:warning: A pipeline triggered by ${user_name} on branch *${ref}* in ${project_name} has failed! :warning:`,
-            author_name: user_name,
-            author_link: `https://gitlab.com/${user_username}`,
-            author_icon: avatar_url,
             fields: builds
               .filter(({ status }) => status === 'failed')
               .map(({ name, status }) => {
