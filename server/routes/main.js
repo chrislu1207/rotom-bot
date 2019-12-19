@@ -11,7 +11,6 @@ const mergeRequestEvent = require('../test/merge-request');
 const noteEvent = require('../test/note');
 
 const axiosConstructor = (formattedMessage) => {
-  console.log(formattedMessage, 'Message')
   return {
     method: 'post',
     headers: {
@@ -22,30 +21,14 @@ const axiosConstructor = (formattedMessage) => {
   }
 }
 
-r.get('/', (req, res, next) => {
-  console.log(req);
-  return res.send('Welcome to Rotom, More than a Bot, a BOT!');
-});
-
 r.post('/', (req, res, next) => {
-  console.log(req.body);
-  return res.send('Got a POST');
-});
-
-r.get('/test', (req, res, next) => {
-  axios(
-    {
-
-    }
-  ).then(r => {
-    console.log(r);
-    return res.send('Testing...');
-  })
-    .catch(e => {
-      console.log(e);
-      return res.send('Something went really bad!');
-    });
-});
+  // TODO 
+  // check body reuqs
+  // pass down bix
+  console.log(req.body)
+  formatMessage(req.get('X-Gitlab-Event'), req.body)
+  return res.sendStatus(200)
+})
 
 r.post('/test-push', (req, res, next) => {
   const { object_kind = '' } = pushEvent;

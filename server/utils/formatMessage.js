@@ -1,6 +1,6 @@
 const formatMessage = (type, body) => {
   switch (type) {
-    case 'push': {
+    case 'Push Hook': {
       const {
         user_name = '',
         user_avatar = '',
@@ -33,7 +33,7 @@ const formatMessage = (type, body) => {
         ],
       };
     }
-    case 'merge_request': {
+    case 'Merge Request Hook': {
       const {
         user: {
           name: user_name = '',
@@ -97,7 +97,7 @@ const formatMessage = (type, body) => {
         ],
       };
     }
-    case 'note': {
+    case 'Note Hook': {
       const {
         user: {
           name: user_name = '',

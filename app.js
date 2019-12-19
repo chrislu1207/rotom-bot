@@ -10,6 +10,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
+app.get('/', (req, res, next) => {
+  return res.send('Welcome to Rotom, More than a Bot, a BOT!');
+});
 app.use('/gitlab', main);
 app.use('/slack', slack);
 
