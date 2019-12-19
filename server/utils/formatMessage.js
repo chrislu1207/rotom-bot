@@ -17,12 +17,7 @@ module.exports.formatMessage = (type, body) => {
             fallback: `${user_name} pushed ${total_commits_count} commit(s) to ${ref} at ${name}`,
             color: '#36a64f',
             pretext: `*${user_name}* pushed ${total_commits_count} commit(s) to *${ref}* at <${web_url}|${name}>:`,
-            // author_name: user_name,
-            // author_link: "http://flickr.com/bobby/",
-            // author_icon: "http://flickr.com/icons/bobby.jpg",
             title: 'Commits:',
-            // title_link: web_url,
-            // text: 'Tim sucks',
             fields: commits.map(({ id, message, url }) => {
               return {
                 value: `<${url}|${id.substring(0, 8)}>: ${message}`,
@@ -124,6 +119,39 @@ module.exports.formatMessage = (type, body) => {
             title,
             title_link: url,
             text: description,
+            footer: 'Gitlab Webhook',
+            footer_icon: avatar_url,
+            ts: Date.now(),
+          },
+        ],
+      };
+    }
+    case 'Pipeline Hook': {
+      const {
+        user: {
+          name: user_name = '',
+          username: user_username = '',
+          avatar_url = '',
+        },
+        project: { name: project_name = '' },
+        builds = [],
+      } = body;
+      return {
+        attachments: [
+          {
+            fallback: `${user_name} triggered pipelines in ${project_name}`,
+            color: '#36a64f',
+            pretext: `${user_name} triggered pipelines in ${project_name}`,
+            author_name: user_name,
+            author_link: `https://gitlab.com/${user_username}`,
+            author_icon: avatar_url,
+            fields: builds.map(({ name, status }) => {
+              return {
+                title: name,
+                value: status,
+                short: false,
+              };
+            }),
             footer: 'Gitlab Webhook',
             footer_icon: avatar_url,
             ts: Date.now(),

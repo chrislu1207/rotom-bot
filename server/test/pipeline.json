@@ -1,0 +1,385 @@
+{
+  "object_kind": "pipeline",
+  "object_attributes": {
+    "id": 104212128,
+    "ref": "rotom-test",
+    "tag": false,
+    "sha": "e26a3c169e685c29c2be9ed1139621e6f7edff81",
+    "before_sha": "fe40aff312f1be2da5bbcb8b6dad1b4f24f5407e",
+    "source": "push",
+    "status": "running",
+    "detailed_status": "running",
+    "stages": ["yarn", "deploy-test", "pre-test", "test", "coverage"],
+    "created_at": "2019-12-19 01:40:59 UTC",
+    "finished_at": null,
+    "duration": null,
+    "variables": []
+  },
+  "merge_request": null,
+  "user": {
+    "name": "Chris Lu",
+    "username": "chrislu1207",
+    "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+  },
+  "project": {
+    "id": 9578875,
+    "name": "grow-frontend",
+    "description": "",
+    "web_url": "https://gitlab.com/poweredbygrow/software/grow-frontend",
+    "avatar_url": null,
+    "git_ssh_url": "git@gitlab.com:poweredbygrow/software/grow-frontend.git",
+    "git_http_url": "https://gitlab.com/poweredbygrow/software/grow-frontend.git",
+    "namespace": "software",
+    "visibility_level": 0,
+    "path_with_namespace": "poweredbygrow/software/grow-frontend",
+    "default_branch": "master",
+    "ci_config_path": ""
+  },
+  "commit": {
+    "id": "e26a3c169e685c29c2be9ed1139621e6f7edff81",
+    "message": "blur\n",
+    "timestamp": "2019-12-18T17:40:40-08:00",
+    "url": "https://gitlab.com/poweredbygrow/software/grow-frontend/commit/e26a3c169e685c29c2be9ed1139621e6f7edff81",
+    "author": {
+      "name": "chrislu1207",
+      "email": "clu@atb.com"
+    }
+  },
+  "builds": [
+    {
+      "id": 384051828,
+      "stage": "coverage",
+      "name": "coverage",
+      "status": "created",
+      "created_at": "2019-12-19 01:41:00 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051827,
+      "stage": "test",
+      "name": "test-utils",
+      "status": "created",
+      "created_at": "2019-12-19 01:41:00 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051825,
+      "stage": "test",
+      "name": "test-ui-kit",
+      "status": "created",
+      "created_at": "2019-12-19 01:41:00 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051824,
+      "stage": "test",
+      "name": "test-translations",
+      "status": "created",
+      "created_at": "2019-12-19 01:41:00 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051823,
+      "stage": "test",
+      "name": "test-origination",
+      "status": "created",
+      "created_at": "2019-12-19 01:41:00 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051822,
+      "stage": "test",
+      "name": "test-insights",
+      "status": "created",
+      "created_at": "2019-12-19 01:41:00 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051821,
+      "stage": "test",
+      "name": "test-forms",
+      "status": "created",
+      "created_at": "2019-12-19 01:41:00 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051820,
+      "stage": "test",
+      "name": "test-finsnap",
+      "status": "created",
+      "created_at": "2019-12-19 01:41:00 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051819,
+      "stage": "test",
+      "name": "test-api",
+      "status": "created",
+      "created_at": "2019-12-19 01:40:59 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051817,
+      "stage": "test",
+      "name": "test-agreements",
+      "status": "created",
+      "created_at": "2019-12-19 01:40:59 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051816,
+      "stage": "pre-test",
+      "name": "build",
+      "status": "created",
+      "created_at": "2019-12-19 01:40:59 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051815,
+      "stage": "pre-test",
+      "name": "lint",
+      "status": "created",
+      "created_at": "2019-12-19 01:40:59 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051814,
+      "stage": "pre-test",
+      "name": "check-dependencies",
+      "status": "created",
+      "created_at": "2019-12-19 01:40:59 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051813,
+      "stage": "deploy-test",
+      "name": "deploy-dev-manual",
+      "status": "created",
+      "created_at": "2019-12-19 01:40:59 UTC",
+      "started_at": null,
+      "finished_at": null,
+      "when": "manual",
+      "manual": true,
+      "allow_failure": true,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": null,
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    },
+    {
+      "id": 384051812,
+      "stage": "yarn",
+      "name": "yarn",
+      "status": "running",
+      "created_at": "2019-12-19 01:40:59 UTC",
+      "started_at": "2019-12-19 01:41:00 UTC",
+      "finished_at": null,
+      "when": "on_success",
+      "manual": false,
+      "allow_failure": false,
+      "user": {
+        "name": "Chris Lu",
+        "username": "chrislu1207",
+        "avatar_url": "https://assets.gitlab-static.net/uploads/-/system/user/avatar/1479768/avatar.png"
+      },
+      "runner": {
+        "id": 404407,
+        "description": "grow-backend-kube-runner",
+        "active": true,
+        "is_shared": false
+      },
+      "artifacts_file": {
+        "filename": null,
+        "size": null
+      }
+    }
+  ]
+}
