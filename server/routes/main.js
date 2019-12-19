@@ -11,6 +11,8 @@ const r = express.Router();
 
 r.post('/', checkToken, (req, res, next) => {
   const type = req.get('X-Gitlab-Event');
+  console.log(req.body, "DO I H AVE AUTHOR?????")
+  console.log(req.body.merge_request.author_id, "MR AUTHOR ID")
   if (type === 'Note Hook') {
     return axios(
       DirectMessageConstructor(

@@ -19,6 +19,7 @@ module.exports.GroupMessageConstructor = (formattedMessage) => ({
 
 module.exports.DirectMessageConstructor = (formattedMessage, id) => {
   const token = process.env.BOT_TOKEN || require('config').get('bot.token')
+  console.log(`${process.env.USER_}${id}`, "USER SLACK ID")
   return {
     method: 'post',
     url: 'https://slack.com/api/chat.postMessage',
@@ -28,7 +29,7 @@ module.exports.DirectMessageConstructor = (formattedMessage, id) => {
     },
     data: {
         ...formattedMessage,
-      channel: process.env.USER_ + id // Add Payload for get user or channel later
+      channel: `${process.env.USER_}${id}`
     }
   }
   
