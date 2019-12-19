@@ -22,12 +22,8 @@ const axiosConstructor = (formattedMessage) => {
 }
 
 r.post('/', checkToken, (req, res, next) => {
-  // TODO 
-  // check body reuqs
-  // pass down bix
-  console.log(process.env.TOKEN || require('config').get('slack.token'), 'TOKENNN@@@@ @ @ @ @ @ @ ')
-  console.log(req.get('X-Gitlab-Event'), 'HEADERRRRRR @@@@@@')
-  
+  const type = req.get('X-Gitlab-Event');
+  if (type === 'Merge Request' && req.body.object_attributes.work_in_progress) return res.sendStatus(200)
   axios(axiosConstructor(formatMessage(req.get('X-Gitlab-Event'), req.body)))
     .then(r => {
       console.log(r);
