@@ -1,3 +1,4 @@
+const { userMap } = require('../AI/userMap')
 module.exports.checkToken = (req, res, next) => {
   const secret = process.env.SECRET || require('config').get('slack.secret')
 
@@ -18,7 +19,7 @@ module.exports.GroupMessageConstructor = (formattedMessage) => ({
   data: formattedMessage
 })
 
-module.exports.DirectMessageConstructor = (formattedMessage) => {
+module.exports.DirectMessageConstructor = (formattedMessage, user) => {
   const token = process.env.BOT_TOKEN || require('config').get('bot.token')
   console.log('Bearer ' + token)
   return {
@@ -30,7 +31,7 @@ module.exports.DirectMessageConstructor = (formattedMessage) => {
     },
     data: {
         ...formattedMessage,
-      channel: 'URDAKB6NN' // Add Payload for get user or channel later
+      channel: userMap[user] // Add Payload for get user or channel later
     }
   }
   
