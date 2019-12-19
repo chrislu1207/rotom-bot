@@ -6,9 +6,8 @@
   "scripts": {
     "start": "node ./server/server.js",
     "watch": "nodemon ./server/server.js",
-    "dev": "concurrently -k -p \"[{name}]\" -n \"LocalTunnel,Node\" -c \"cyan.bold,green.bold\" \"npm run lt\" \"npm run watch\"",
-    "test": "echo \"Success: no test needed...this code is perfect\" && exit 0",
-    "lt": "lt --port 8765 --subdomain rotom-bot"
+    "dev": "concurrently -k -p \"[{name}]\" -n \"Node\" -c \"green.bold\" \"npm run watch\"",
+    "test": "echo \"Success: no test needed...this code is perfect\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -26,15 +25,11 @@
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
-    "botkit": "0.2.2",
-    "botkit-storage-mongo": "^1.0.2",
     "concurrently": "^5.0.1",
     "config": "^3.2.4",
     "debug": "^4.1.1",
     "express": "^4.17.1",
     "http-errors": "^1.7.3",
-    "localtunnel": "^2.0.0",
-    "mongodb": "^1.4.39",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2"
   }

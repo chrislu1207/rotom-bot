@@ -11,8 +11,6 @@ const r = express.Router();
 
 r.post('/', checkToken, (req, res, next) => {
   const type = req.get('X-Gitlab-Event');
-  console.log(type, '- TYPE');
-  console.log(req.body, '- BODY REQ');
   if (type === 'Note Hook') {
     return axios(
       DirectMessageConstructor(
