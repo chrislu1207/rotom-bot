@@ -16,7 +16,7 @@ module.exports.formatMessage = (type, body) => {
           {
             fallback: `${user_name} pushed ${total_commits_count} commit(s) to ${ref} at ${name}`,
             color: '#36a64f',
-            pretext: `*${user_name}* pushed ${total_commits_count} commit(s) to *${ref}* at <${web_url}|${name}>:`,
+            pretext: `:chart_with_upwards_trend: *${user_name}* pushed ${total_commits_count} commit(s) to *${ref}* at <${web_url}|${name}>:`,
             title: 'Commits:',
             fields: commits.map(({ id, message, url }) => {
               return {
@@ -45,15 +45,21 @@ module.exports.formatMessage = (type, body) => {
           target_branch = '',
           title = '',
           url = '',
+          action = '',
         },
         assignees = [],
       } = body;
+      const isMRApproval = action === 'approval';
       return {
         attachments: [
           {
-            fallback: `${user_name} submitted a merge request to ${project_name}`,
+            fallback: isMRApproval
+              ? `${user_name} approved a merge request in ${project_name}`
+              : `${user_name} submitted a merge request to ${project_name}`,
             color: '#36a64f',
-            pretext: `:computer: *${user_name} submitted a merge request to ${project_name}* :computer:`,
+            pretext: isMRApproval
+              ? `:white_check_mark: *${user_name} approved a merge request in ${project_name}*`
+              : `:computer: *${user_name} submitted a merge request to ${project_name}*`,
             author_name: user_name,
             author_link: `https://gitlab.com/${user_username}`,
             author_icon: avatar_url,
@@ -112,7 +118,7 @@ module.exports.formatMessage = (type, body) => {
           {
             fallback: `${user_name} commented on a merge request in ${project_name}`,
             color: '#36a64f',
-            pretext: `:speech_balloon: *${user_name} commented on a merge request in ${project_name}* :speech_balloon:`,
+            pretext: `:speech_balloon: *${user_name} commented on a merge request in ${project_name}*`,
             author_name: user_name,
             author_link: `https://gitlab.com/${user_username}`,
             author_icon: avatar_url,
