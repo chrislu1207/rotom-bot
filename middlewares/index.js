@@ -4,7 +4,6 @@ module.exports.checkToken = (req, res, next) => {
 
   console.log(secret, "My Secret")
   if (req.get('X-Gitlab-Token') === secret) {
-    console.log('I am here')
     return next()
   }
   return next('Easy there champs!! Nice try! :p')
