@@ -1,4 +1,3 @@
-const { userMap } = require('../AI/userMap')
 module.exports.checkToken = (req, res, next) => {
   const secret = process.env.SECRET || require('config').get('slack.secret')
 
@@ -34,8 +33,3 @@ module.exports.DirectMessageConstructor = (formattedMessage, id) => {
   }
   
 }
-
-// Chris
-// 1479768  - URRL3DXUL
-// Tim
-// 3494209 - URDAKB6NN
