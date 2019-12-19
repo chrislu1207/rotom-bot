@@ -45,7 +45,7 @@ r.post('/test-push', (req, res, next) => {
 });
 
 r.post('/test-merge-request', (req, res, next) => {
-  const { object_kind = '' } = mergeRequestEvent;
+  const object_kind = mergeRequestEvent.object_kind || '';
 
   axios(axiosConstructor(formatMessage(object_kind, mergeRequestEvent)))
     .then(r => {
