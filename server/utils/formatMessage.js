@@ -140,9 +140,9 @@ module.exports.formatMessage = (type, body) => {
       return {
         attachments: [
           {
-            fallback: `A pipeline triggered by *${user_name}* on branch *${ref}* in ${project_name} has failed!`,
+            fallback: `A pipeline triggered by ${user_name} on branch ${ref} in ${project_name} has failed!`,
             color: '#36a64f',
-            pretext: `:warning: A pipeline triggered by ${user_name} on branch *${ref}* in ${project_name} has failed! :warning:`,
+            pretext: `:warning: A pipeline triggered by *${user_name}* on branch *${ref}* in *${project_name}* has failed!`,
             fields: builds
               .filter(({ status }) => status === 'failed')
               .map(({ name, status }) => {
