@@ -15,7 +15,7 @@ r.post('/', checkToken, (req, res, next) => {
     return axios(
       DirectMessageConstructor(
         formatMessage(type, req.body),
-        req.body.user.username,
+        req.body.merge_request.author_id,
       ),
     )
       .then(r => {
